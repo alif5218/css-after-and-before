@@ -1,0 +1,73 @@
+body{
+	background:crimson;
+}
+.box{
+	width:200px;
+	height:100px;
+	border:2px solid #fff;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	transition:.5s;
+	text-align:center;
+	line-height:100px;
+	z-index:1;
+	color:#fff;
+	font-size:30px;
+	font-family:arial;
+	cursor:pointer;
+	
+
+}
+.box:hover{
+	-webkit-box-reflect: below 10px linear-gradient(#ffffff00, #9e9eff);
+	box-shadow:0px 0px 35px #ff00e766;
+}
+.box::after{
+	position:absolute;
+	content:"";
+	background:transparent;
+	z-index:-1;
+	inset:5px;
+	transition:.5s;
+	
+}
+.box:hover::after{
+	background:black;
+}
+.box i{
+	display:block;
+	position:absolute;
+transform: translateX(10px)
+	
+}
+.box .i1::after{
+	position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: crimson;
+    top: -102px;
+    left: 129px;
+    transition: .5s;
+	transform: translateX(10px) skewX(293deg) !important
+}
+.box:hover .i1::after{
+	width:20px;
+	left:50px;
+}
+.box .i2::after{
+position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #dc143c;
+    bottom: -2px;
+    right: -78px;
+    transition: .5s;
+}
+.box:hover .i2::after{
+	width:20px;
+	right:-150px;
+}
